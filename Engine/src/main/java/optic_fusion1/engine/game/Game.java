@@ -1,6 +1,7 @@
 package optic_fusion1.engine.game;
 
 import java.util.Scanner;
+import optic_fusion1.engine.component.item.material.MaterialManager;
 import optic_fusion1.engine.input.InputHandler;
 import optic_fusion1.engine.logging.CustomLogger;
 import optic_fusion1.engine.utils.Utils;
@@ -8,6 +9,7 @@ import optic_fusion1.engine.utils.Utils;
 public abstract class Game {
 
   private static final Scanner SCANNER = new Scanner(System.in);
+  private static final MaterialManager MATERIAL_MANAGER = new MaterialManager();
   public static final CustomLogger LOGGER = new CustomLogger();
   private boolean running;
   private InputHandler inputHandler;
@@ -48,6 +50,10 @@ public abstract class Game {
 
   public Scanner getScanner() {
     return SCANNER;
+  }
+  
+  public MaterialManager getMaterialManager(){
+    return MATERIAL_MANAGER;
   }
 
 }

@@ -14,6 +14,10 @@ public class SimpleInventory extends Inventory {
     this.size = size;
   }
 
+  public int getItemStackAmount() {
+    return ITEMS.size();
+  }
+
   @Override
   public int getSize() {
     return size;
@@ -38,11 +42,25 @@ public class SimpleInventory extends Inventory {
   }
 
   @Override
-  public void addItemStack(ItemStack itemStack) {
+  public void addItemStack(ItemStack item) {
     if (ITEMS.size() >= size) {
       return;
     }
-    ITEMS.add(itemStack);
+    for (ItemStack itemStack : ITEMS) {
+      if (itemStack.getMaterial() == item.getMaterial()) {
+        int maxAmount = item.getMaterial().getMaxAmount();
+        if (item.getAmount() != maxAmount) {
+          int j = Math.min(item.getAmount(), maxAmount - itemStack.getAmount());
+          if (j > 0) {
+            itemStack.setAmount(itemStack.getAmount() + j);
+            item.setAmount(item.getAmount() - j);
+          }
+        }
+      }
+    }
+    if (item.getAmount() != 0) {
+      ITEMS.add(item);
+    }
   }
 
   @Override
