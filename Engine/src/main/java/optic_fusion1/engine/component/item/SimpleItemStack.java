@@ -7,12 +7,12 @@ public class SimpleItemStack extends ItemStack {
   private Material material;
   private int amount;
 
-  public SimpleItemStack(Material material) {
-    this(material, 1);
+  public SimpleItemStack(String displayName, Material material) {
+    this(displayName, material, 1);
   }
 
-  public SimpleItemStack(Material material, int amount) {
-    super(material.getName());
+  public SimpleItemStack(String displayName, Material material, int amount) {
+    super(displayName);
     this.material = material;
     this.amount = amount;
   }
@@ -26,14 +26,14 @@ public class SimpleItemStack extends ItemStack {
   public void setAmount(int amount) {
     this.amount = amount;
   }
-  
+
   @Override
-  public Material getMaterial(){
+  public Material getMaterial() {
     return material;
   }
-  
+
   @Override
-  public void setMaterial(Material material){
+  public void setMaterial(Material material) {
     this.material = material;
   }
 

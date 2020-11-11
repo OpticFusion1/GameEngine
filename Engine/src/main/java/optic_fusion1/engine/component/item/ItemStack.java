@@ -5,8 +5,8 @@ import optic_fusion1.engine.component.item.material.Material;
 
 public abstract class ItemStack extends Component {
 
-  public ItemStack(String name) {
-    super(name);
+  public ItemStack(String displayName) {
+    super(displayName);
   }
 
   public abstract Material getMaterial();
