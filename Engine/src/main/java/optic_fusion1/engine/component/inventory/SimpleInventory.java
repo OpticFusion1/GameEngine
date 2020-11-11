@@ -47,8 +47,8 @@ public class SimpleInventory extends Inventory {
       return;
     }
     for (ItemStack itemStack : ITEMS) {
-      if (itemStack.getMaterial() == item.getMaterial()) {
-        int maxAmount = item.getMaterial().getMaxAmount();
+      if (itemStack.getItem().getMaterial() == item.getItem().getMaterial()) {
+        int maxAmount = item.getItem().getMaterial().getMaxAmount();
         if (item.getAmount() != maxAmount) {
           int j = Math.min(item.getAmount(), maxAmount - itemStack.getAmount());
           if (j > 0) {

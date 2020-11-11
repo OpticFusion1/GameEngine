@@ -1,20 +1,22 @@
 package optic_fusion1.engine.component.item;
 
-import optic_fusion1.engine.component.item.material.Material;
-
 public class SimpleItemStack extends ItemStack {
 
-  private Material material;
+  private Item item;
   private int amount;
 
-  public SimpleItemStack(String displayName, Material material) {
-    this(displayName, material, 1);
+  public SimpleItemStack(String displayName, Item item) {
+    this(displayName, item, 1);
   }
 
-  public SimpleItemStack(String displayName, Material material, int amount) {
+  public SimpleItemStack(String displayName, Item item, int amount) {
     super(displayName);
-    this.material = material;
+    this.item = item;
     this.amount = amount;
+  }
+  
+  public Item getItem(){
+    return item;
   }
 
   @Override
@@ -25,16 +27,6 @@ public class SimpleItemStack extends ItemStack {
   @Override
   public void setAmount(int amount) {
     this.amount = amount;
-  }
-
-  @Override
-  public Material getMaterial() {
-    return material;
-  }
-
-  @Override
-  public void setMaterial(Material material) {
-    this.material = material;
   }
 
 }
