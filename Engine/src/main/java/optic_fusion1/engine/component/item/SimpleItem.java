@@ -1,6 +1,7 @@
 package optic_fusion1.engine.component.item;
 
 import optic_fusion1.engine.component.item.material.Material;
+import static optic_fusion1.engine.game.Game.LOGGER;
 
 public class SimpleItem extends Item {
 
@@ -8,6 +9,11 @@ public class SimpleItem extends Item {
 
   public SimpleItem(String displayName) {
     super(displayName);
+  }
+
+  @Override
+  public void use() {
+    LOGGER.info(getName() + " has been used");
   }
 
   @Override

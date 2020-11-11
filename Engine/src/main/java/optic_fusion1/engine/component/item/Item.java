@@ -8,6 +8,8 @@ public abstract class Item extends Component {
   public Item(String displayName) {
     super(displayName);
   }
+  
+  public abstract void use();
 
   public abstract Material getMaterial();
 
