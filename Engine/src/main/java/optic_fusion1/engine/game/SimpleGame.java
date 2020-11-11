@@ -8,13 +8,6 @@ public abstract class SimpleGame extends Game {
   private boolean useDefaultInputHandler = false;
 
   @Override
-  public void startGame() {
-    init();
-    setRunning(true);
-    run();
-  }
-
-  @Override
   public void run() {
     if (useDefaultInputHandler) {
       SimpleInputHandler simpleInputHandler = new SimpleInputHandler(this);
