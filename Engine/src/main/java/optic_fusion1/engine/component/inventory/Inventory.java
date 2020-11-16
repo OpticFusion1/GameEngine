@@ -9,6 +9,8 @@ public abstract class Inventory extends Component {
     super(name);
   }
 
+  public abstract boolean hasItem(ItemStack item);
+  
   public abstract int getSize();
 
   public abstract void setSize(int size);

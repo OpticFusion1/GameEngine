@@ -72,4 +72,9 @@ public class SimpleInventory extends Inventory {
   public boolean isValidSlot(int slot) {
     return slot < 0 ? false : slot < size;
   }
+
+  @Override
+  public boolean hasItem(ItemStack item) {
+    return ITEMS.stream().filter(itemStack -> (itemStack.getName().equals(item.getName()))).anyMatch(itemStack -> (itemStack.getItem().getMaterial() == item.getItem().getMaterial()));
+  }
 }

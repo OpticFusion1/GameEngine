@@ -15,6 +15,7 @@ public class SimpleItemStack extends ItemStack {
     this.amount = amount;
   }
   
+  @Override
   public Item getItem(){
     return item;
   }
