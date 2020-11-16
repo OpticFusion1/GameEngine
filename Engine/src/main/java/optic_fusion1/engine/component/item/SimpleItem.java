@@ -7,8 +7,9 @@ public class SimpleItem extends Item {
 
   private Material material;
 
-  public SimpleItem(String displayName) {
+  public SimpleItem(String displayName, Material material) {
     super(displayName);
+    this.material = material;
   }
 
   @Override
