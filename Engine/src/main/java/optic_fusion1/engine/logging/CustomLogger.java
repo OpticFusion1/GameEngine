@@ -109,14 +109,6 @@ public class CustomLogger {
     severe(MessageFormat.format(message, params));
   }
 
-  public void debug(String string) {
-    log(string, CustomLevel.DEBUG);
-  }
-
-  public void debug(String message, Object params[]) {
-    debug(MessageFormat.format(message, params));
-  }
-
   public void error(String string, Throwable thrwbl) {
     Exception duplicate = new Exception(string, thrwbl);
     logInFile(duplicate);
