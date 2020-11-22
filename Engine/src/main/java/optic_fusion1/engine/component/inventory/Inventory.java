@@ -2,11 +2,12 @@ package optic_fusion1.engine.component.inventory;
 
 import optic_fusion1.engine.component.Component;
 import optic_fusion1.engine.component.item.ItemStack;
+import optic_fusion1.engine.game.Game;
 
 public abstract class Inventory extends Component {
 
-  public Inventory(String name) {
-    super(name);
+  public Inventory(String name, Game game) {
+    super(name, game);
   }
 
   public abstract boolean hasItem(ItemStack item);

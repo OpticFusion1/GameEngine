@@ -3,14 +3,15 @@ package optic_fusion1.engine.component.inventory;
 import java.util.ArrayList;
 import java.util.List;
 import optic_fusion1.engine.component.item.ItemStack;
+import optic_fusion1.engine.game.Game;
 
 public class SimpleInventory extends Inventory {
 
   private static final List<ItemStack> ITEMS = new ArrayList<>();
   private int size;
 
-  public SimpleInventory(String name, int size) {
-    super(name);
+  public SimpleInventory(String name, int size, Game game) {
+    super(name, game);
     this.size = size;
   }
 

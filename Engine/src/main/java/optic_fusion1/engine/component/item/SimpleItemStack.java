@@ -1,16 +1,18 @@
 package optic_fusion1.engine.component.item;
 
+import optic_fusion1.engine.game.Game;
+
 public class SimpleItemStack extends ItemStack {
 
   private Item item;
   private int amount;
 
-  public SimpleItemStack(String displayName, Item item) {
-    this(displayName, item, 1);
+  public SimpleItemStack(String displayName, Item item, Game game) {
+    this(displayName, item, 1, game);
   }
 
-  public SimpleItemStack(String displayName, Item item, int amount) {
-    super(displayName);
+  public SimpleItemStack(String displayName, Item item, int amount, Game game) {
+    super(displayName, game);
     this.item = item;
     this.amount = amount;
   }

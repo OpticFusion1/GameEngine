@@ -1,9 +1,11 @@
 package optic_fusion1.engine.component.entity;
 
+import optic_fusion1.engine.game.Game;
+
 public abstract class LivingEntity extends Entity {
 
-  public LivingEntity(String name) {
-    super(name);
+  public LivingEntity(String name, Game game) {
+    super(name, game);
   }
   
   public abstract int getHealth();

@@ -1,12 +1,14 @@
 package optic_fusion1.engine.component.entity;
 
+import optic_fusion1.engine.game.Game;
+
 public class SimpleLivingEntity extends LivingEntity {
 
   private int health;
   private int maxHealth;
   
-  public SimpleLivingEntity(String name, int health, int maxHealth) {
-    super(name);
+  public SimpleLivingEntity(String name, int health, int maxHealth, Game game) {
+    super(name, game);
     this.health = health;
     this.maxHealth = maxHealth;
   }
