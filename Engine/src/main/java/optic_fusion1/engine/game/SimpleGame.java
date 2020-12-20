@@ -2,7 +2,6 @@ package optic_fusion1.engine.game;
 
 import optic_fusion1.engine.input.SimpleInputHandler;
 
-//REMINDER: Replace important System.out.println with proper LOGGER methods
 public abstract class SimpleGame extends Game {
 
   private boolean useDefaultInputHandler = false;
