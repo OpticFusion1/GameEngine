@@ -44,6 +44,7 @@ public abstract class Game {
   public void init() {
     Utils.clearScreen();
     (gameInfo = new GameInfo()).load();
+    setRunning(true);
   }
 
   public GameInfo getGameInfo() {

@@ -5,24 +5,30 @@ import optic_fusion1.engine.game.Game;
 
 public abstract class Component {
 
-  private static UUID uniqueId = UUID.randomUUID();
+  private static UUID uniqueId;
   private String name;
   private Game game;
-  
-  public Component(String name, Game game){
+
+  public Component(String name, Game game) {
     this.name = name;
+    this.game = game;
+    uniqueId = UUID.randomUUID();
   }
-  
-  public Game getGame(){
+
+  public abstract void tick();
+
+  public abstract void render();
+
+  public Game getGame() {
     return game;
   }
-  
-  public String getName(){
+
+  public String getName() {
     return name;
   }
-  
-  public UUID getUniqueId(){
+
+  public UUID getUniqueId() {
     return uniqueId;
   }
-  
+
 }

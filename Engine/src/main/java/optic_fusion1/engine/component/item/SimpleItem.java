@@ -14,6 +14,14 @@ public class SimpleItem extends Item {
   }
 
   @Override
+  public void tick() {
+  }
+
+  @Override
+  public void render() {
+  }
+
+  @Override
   public void use() {
     LOGGER.info(getName() + " has been used");
   }

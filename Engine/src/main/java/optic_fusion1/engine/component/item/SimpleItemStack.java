@@ -16,9 +16,17 @@ public class SimpleItemStack extends ItemStack {
     this.item = item;
     this.amount = amount;
   }
-  
+
   @Override
-  public Item getItem(){
+  public void tick() {
+  }
+
+  @Override
+  public void render() {
+  }
+
+  @Override
+  public Item getItem() {
     return item;
   }
 

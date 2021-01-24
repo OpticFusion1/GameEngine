@@ -15,6 +15,14 @@ public class SimpleInventory extends Inventory {
     this.size = size;
   }
 
+  @Override
+  public void tick() {
+  }
+
+  @Override
+  public void render() {
+  }
+
   public int getItemStackAmount() {
     return ITEMS.size();
   }

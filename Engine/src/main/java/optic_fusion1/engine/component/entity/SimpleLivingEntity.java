@@ -6,11 +6,19 @@ public class SimpleLivingEntity extends LivingEntity {
 
   private int health;
   private int maxHealth;
-  
+
   public SimpleLivingEntity(String name, int health, int maxHealth, Game game) {
     super(name, game);
     this.health = health;
     this.maxHealth = maxHealth;
+  }
+
+  @Override
+  public void tick() {
+  }
+
+  @Override
+  public void render() {
   }
 
   @Override
