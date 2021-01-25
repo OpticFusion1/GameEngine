@@ -14,6 +14,7 @@ public abstract class Game {
   private static final EntityManager ENTITY_MANAGER = new EntityManager();
   public static final CustomLogger LOGGER = new CustomLogger();
   private boolean running;
+  private boolean debug;
   private InputHandler inputHandler;
   private GameInfo gameInfo;
 
@@ -54,13 +55,21 @@ public abstract class Game {
   public Scanner getScanner() {
     return SCANNER;
   }
-  
-  public MaterialManager getMaterialManager(){
+
+  public MaterialManager getMaterialManager() {
     return MATERIAL_MANAGER;
   }
-  
-  public EntityManager getEntityManager(){
+
+  public EntityManager getEntityManager() {
     return ENTITY_MANAGER;
+  }
+
+  public void toggleDebugMode() {
+    debug = !debug;
+  }
+
+  public boolean isDebuggingEnabled() {
+    return debug;
   }
 
 }
