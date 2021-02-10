@@ -9,11 +9,15 @@ public abstract class Item extends Component {
   public Item(String displayName, Game game) {
     super(displayName, game);
   }
-  
+
   public abstract void use();
 
   public abstract Material getMaterial();
 
   public abstract void setMaterial(Material material);
+  
+  public abstract int getAmount();
+  
+  public abstract void setAmount(int amount);
 
 }

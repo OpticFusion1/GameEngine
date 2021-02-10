@@ -1,7 +1,7 @@
 package optic_fusion1.engine.component.inventory;
 
 import optic_fusion1.engine.component.Component;
-import optic_fusion1.engine.component.item.ItemStack;
+import optic_fusion1.engine.component.item.Item;
 import optic_fusion1.engine.game.Game;
 
 public abstract class Inventory extends Component {
@@ -10,19 +10,19 @@ public abstract class Inventory extends Component {
     super(name, game);
   }
 
-  public abstract boolean hasItem(ItemStack item);
+  public abstract boolean hasItem(Item item);
   
   public abstract int getSize();
 
   public abstract void setSize(int size);
 
-  public abstract ItemStack getItemStack(int slot);
+  public abstract Item getItem(int slot);
 
-  public abstract void addItemStack(ItemStack itemStack);
+  public abstract void addItem(Item Item);
 
-  public abstract void removeItemStack(int slot);
+  public abstract void removeItem(int slot);
 
-  public abstract void setItemStack(int slot, ItemStack itemStack);
+  public abstract void setItem(int slot, Item item);
 
   public abstract boolean isValidSlot(int slot);
 
